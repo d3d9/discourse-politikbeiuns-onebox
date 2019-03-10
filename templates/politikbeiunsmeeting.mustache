@@ -1,0 +1,31 @@
+<h3>
+  Sitzung <a href="{{link}}" target="_blank">{{name}}</a><br/>
+  {{start}} ― {{end}}<br/>
+  Einladung: 
+  {{#einladung}}
+  <a href="{{einladung}}">Dokument</a>
+  {{/einladung}}
+  {{^einladung}}
+  kein Dokument verlinkt
+  {{/einladung}}
+</h3>
+<p>
+  Tagesordnungspunkte:<br/>
+  {{#top_list}}
+  –{{top_no}}– {{top_name}}<br/>
+  {{/top_list}}
+  {{^top_list}}
+  ― keine
+  {{/top_list}}
+</p>
+{{#has_auxFiles}}
+  <p>
+    Zusatzanlagen:<br/>
+    {{#auxFiles}}
+    ― <a href="{{file_link}}">{{file_name}}</a><br/>
+    {{/auxFiles}}
+  </p>
+{{/has_auxFiles}}
+<p>
+  Zuletzt bearbeitet: {{modified}}
+</p>

@@ -1,0 +1,21 @@
+<h3>
+  {{paperType}} {{reference}}<br/>
+  <a href="{{link}}" target="_blank">{{name}}</a>
+</h3>
+{{#mainFile}}
+<p>
+  Hauptanlage:<br/>
+  ― <a href="{{file_link}}">{{file_name}}</a>
+</p>
+{{/mainFile}}
+{{#has_auxFiles}}
+  <p>
+    Zusatzanlagen:<br/>
+    {{#auxFiles}}
+    ― <a href="{{file_link}}">{{file_name}}</a><br/>
+    {{/auxFiles}}
+  </p>
+{{/has_auxFiles}}
+<p>
+  Zuletzt bearbeitet: {{modified}}
+</p>
